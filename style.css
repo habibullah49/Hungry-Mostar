@@ -1,0 +1,13 @@
+#foodsDetail img {
+  width: 300px;
+}
+#foods {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 30px;
+  margin-top: 20px;
+}
+
+#foods img {
+  width: 300px;
+}
