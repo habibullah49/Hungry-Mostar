@@ -30,10 +30,10 @@ const displayData = data => {
         const foodsDetails = `
         <div class="col">
             <div>
-                <img  src="${element.strMealThumb}"/>
+                <img src="${element.strMealThumb}"/>
                 <div>
                     <h5>${element.strMeal}</h5>
-                    <button class="btn btn-dark" onclick="displayFoodDetails('${element.strMeal}')">Details</button>
+                    <button onclick="displayFoodDetails('${element.strMeal}')" class="btn btn-dark">Details</button>
                 </div>
             </div>
         </div> 
