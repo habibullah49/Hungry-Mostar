@@ -28,15 +28,13 @@ const displayData = data => {
     data.meals.forEach(element => {
         const div = document.createElement('div');
         div.innerHTML= `
-        <div class="col">
-            <div>
-                <img src="${element.strMealThumb}"/>
-                <div>
-                    <h5>${element.strMeal}</h5>
-                    <button onclick="displayFoodDetails('${element.strMeal}')" class="btn btn-dark">Details</button>
-                </div>
-            </div>
-        </div> 
+        <div class="card bg-light" style="width: 19rem;height:26rem">
+        <img class="card-img-top" src="${element.strMealThumb}" alt="Card image cap">
+        <div class="card-body">
+            <h5 class="card-title">${element.strMeal}</h5>
+            <button onclick="displayFoodDetails('${element.strMeal}')" class="btn btn-dark">Details</button>            
+        </div>
+        </div>
         `;
         food.appendChild(div);
     });
