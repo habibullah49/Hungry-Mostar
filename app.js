@@ -8,13 +8,13 @@ document.getElementById('searchButton').addEventListener('click',function(event)
 });
 
 function dataReload(input) {
-    if (input.length === 1) {
+    if (input.length===1) {
         url = `https://www.themealdb.com/api/json/v1/1/search.php?f=${input}`;
         food.innerHTML = null;
         foodDetail.innerHTML = null;
       }
      else {
-         url = `https://www.themealdb.com/api/json/v1/1/search.php?s=${input}`;
+         url =`https://www.themealdb.com/api/json/v1/1/search.php?s=${input}`;
          food.innerHTML = null;
          foodDetail.innerHTML = null;
      }
@@ -27,7 +27,7 @@ function dataReload(input) {
 const displayData = data => {
     data.meals.forEach(element => {
         const div = document.createElement('div');
-        const foodsDetails = `
+        div.innerHTML= `
         <div class="col">
             <div>
                 <img src="${element.strMealThumb}"/>
@@ -38,7 +38,6 @@ const displayData = data => {
             </div>
         </div> 
         `;
-        div.innerHTML = foodsDetails;
         food.appendChild(div);
     });
 }
@@ -56,8 +55,8 @@ const displayFoodDetails = (string) => {
             for (let i = 0; i < data.meals.length; i++) {
                 element = data.meals[i];
 
-                if (string === element.strMeal) {
-                  foodInfo = `
+                if (string===element.strMeal) {
+                    div.innerHTML = `
                     <img src="${element.strMealThumb}" class="card-img-top">
                     <div class="card-body">
                     <h3 class="card-title">${element.strMeal}</h3>
@@ -69,11 +68,9 @@ const displayFoodDetails = (string) => {
                         <li>${element.strIngredient4}</li>
                         <li>${element.strIngredient5}</li>
                     </ul>
-                    </div>
-                     `;
+                    </div>`;
                 }
             }
-            div.innerHTML =foodInfo;
             foodDetail.appendChild(div);
         });
 }
