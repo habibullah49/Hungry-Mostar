@@ -57,16 +57,18 @@ const displayFoodDetails = (string) => {
 
                 if (string===element.strMeal) {
                     div.innerHTML = `
-                    <img src="${element.strMealThumb}" class="card-img-top">
+                    <img class="card-img-top" src="${element.strMealThumb}">
                     <div class="card-body">
-                    <h3 class="card-title">${element.strMeal}</h3>
-                    <p>Ingredients</p>
+                    <h2 class="card-title">${element.strMeal}</h2>
+                    <h5>Ingredients</h5>
                     <ul>                
                         <li>${element.strIngredient1}</li>
                         <li>${element.strIngredient2}</li>
                         <li>${element.strIngredient3}</li>
                         <li>${element.strIngredient4}</li>
                         <li>${element.strIngredient5}</li>
+                        <li>${element.strIngredient6}</li>
+                        <li>${element.strIngredient7}</li>
                     </ul>
                     </div>`;
                 }
